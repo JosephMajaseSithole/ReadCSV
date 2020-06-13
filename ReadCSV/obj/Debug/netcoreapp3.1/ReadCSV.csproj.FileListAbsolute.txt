@@ -1,0 +1,13 @@
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\bin\Debug\netcoreapp3.1\ReadCSV.exe
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\bin\Debug\netcoreapp3.1\ReadCSV.deps.json
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\bin\Debug\netcoreapp3.1\ReadCSV.runtimeconfig.json
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\bin\Debug\netcoreapp3.1\ReadCSV.runtimeconfig.dev.json
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\bin\Debug\netcoreapp3.1\ReadCSV.dll
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\bin\Debug\netcoreapp3.1\ReadCSV.pdb
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\obj\Debug\netcoreapp3.1\ReadCSV.csprojAssemblyReference.cache
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\obj\Debug\netcoreapp3.1\ReadCSV.csproj.CoreCompileInputs.cache
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\obj\Debug\netcoreapp3.1\ReadCSV.AssemblyInfoInputs.cache
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\obj\Debug\netcoreapp3.1\ReadCSV.AssemblyInfo.cs
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\obj\Debug\netcoreapp3.1\ReadCSV.dll
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\obj\Debug\netcoreapp3.1\ReadCSV.pdb
+C:\Users\Majase\Desktop\East Landon\ReadCSV\ReadCSV\ReadCSV\obj\Debug\netcoreapp3.1\ReadCSV.genruntimeconfig.cache
