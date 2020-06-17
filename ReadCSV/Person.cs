@@ -71,25 +71,28 @@ namespace ReadCSV
 
 		public List<Frequency> SortAddresses(List<Person> people)
 		{
-			var addressesList = new List<string>();
+			var addressesList = new List<Address>();
 			var frequencies = new List<Frequency>();
 
 			foreach (var person in people)
 			{
-				addressesList.Add(person.Address);
+				addressesList.Add(new Address
+				{
+					StreetNumber = person.Address.Split(" ")[0],
+					StreetName = person.Address.Substring(person.Address.IndexOf(' ') + 1)
+				});
 			}
 
-			foreach (var streetName in addressesList.Distinct())
+			foreach (var address in addressesList.OrderBy(a => a.StreetName).Distinct())
 			{
 				frequencies.Add(new Frequency()
 				{
-					Name = streetName,
-					Count = people.Where(n => n.Address == streetName).Count()
+					Name = address.StreetNumber + " " + address.StreetName
 				});
 
 			}
 
-			return frequencies.OrderByDescending(c => c.Count).ThenBy(x => x.Name).ToList();
+			return frequencies;
 		}
 
 		public bool WriteAddressesToTextFile(List<Frequency> frequencies)
@@ -105,7 +108,7 @@ namespace ReadCSV
 
 					foreach (var frequency in frequencies)
 					{
-						frequenciesString.Add(frequency.Count + ", " + frequency.Name);
+						frequenciesString.Add(frequency.Name);
 					}
 
 					foreach (var text in frequenciesString)

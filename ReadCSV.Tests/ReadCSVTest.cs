@@ -95,8 +95,8 @@ namespace ReadCSV.Tests
 			var nameAtLatPosition = frequencies.Last().Name;
 
 			//Assert
-			Assert.AreEqual("102 Long Lane", nameAtFirstPosition);
-			Assert.AreEqual("94 Roland St", nameAtLatPosition);
+			Assert.AreEqual("65 Ambling Way", nameAtFirstPosition);
+			Assert.AreEqual("49 Sutherland St", nameAtLatPosition);
 		}
 
 		[TestMethod]
