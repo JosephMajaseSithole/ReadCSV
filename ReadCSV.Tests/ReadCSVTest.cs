@@ -8,60 +8,67 @@ namespace ReadCSV.Tests
 	[TestClass]
 	public class ReadCSVTest
 	{
-
 		public List<Person> people = new List<Person>() {
 				new Person()
 				{
-					FirstName = "Thabo",
-					LastName = "Magana"
-				},
-					new Person()
-				{
-					FirstName = "Eric",
-					LastName = "Sithole"
+					FirstName = "Jimmy",
+					LastName = "Smith",
+					Address = "102 Long Lane",
+					PhoneNumber = "29384857"
 				},
 				new Person()
 				{
-					FirstName = "Thabo",
-					LastName = "Sithole"
+					FirstName = "Clive",
+					LastName = "Owen",
+					Address = "65 Ambling Way",
+					PhoneNumber = "31214788"
+				},
+				new Person()
+				{
+					FirstName = "James",
+					LastName = "Brown",
+					Address = "82 Stewart St",
+					PhoneNumber = "32114566"
+				},
+				new Person()
+				{
+					FirstName = "Graham",
+					LastName = "Howe",
+					Address = "12 Howard St",
+					PhoneNumber = "8766556"
 				},
 				new Person()
 				{
 					FirstName = "John",
-					LastName = "Doe"
+					LastName = "Howe",
+					Address = "78 Short Lane",
+					PhoneNumber = "29384857"
 				},
+				new Person()
+				{
+					FirstName = "Clive",
+					LastName = "Smith",
+					Address = "49 Sutherland St",
+					PhoneNumber = "31214788"
+				},
+				new Person()
+				{
+					FirstName = "James",
+					LastName = "Owen",
+					Address = "8 Crimson Rd",
+					PhoneNumber = "32114566"
+				},
+				new Person()
+				{
+					FirstName = "Graham",
+					LastName = "Brown",
+					Address = "94 Roland St",
+					PhoneNumber = "8766556"
+				}
 			};
-
-		public List<Address> addresses = new List<Address>() {
-				new Address()
-				{
-					StreetName = "Vermullen Street"
-				},
-				new Address()
-				{
-					StreetName = "Madiba Street"
-				},
-				new Address()
-				{
-				StreetName = "Koranna Ave"
-				},
-				new Address()
-				{
-					StreetName = "Madiba Street"
-				},
-				new Address()
-				{
-					StreetName = "Madiba Street"
-				},
-				new Address()
-				{
-				StreetName = "Koranna Ave"
-				},
-			};
-
 
 		[TestMethod]
-		public void Sort_People_FirstNames_And_LastNames_Based_On_Frequency()
+		public void Sort_Names_Frequency_Test()
 		{
 			//Arrange
 			var person = new Person();
@@ -72,68 +79,52 @@ namespace ReadCSV.Tests
 			var nameAtLatPosition = frequencies.Last().Name;
 
 			//Assert
-			Assert.AreEqual("Sithole", nameAtFirstPosition);
-			Assert.AreEqual("Magana", nameAtLatPosition);
+			Assert.AreEqual("Brown", nameAtFirstPosition);
+			Assert.AreEqual("John", nameAtLatPosition);
 		}
 
 		[TestMethod]
-		public void Sort_Addresses_Based_On_Frequency()
+		public void Sort_Addresses_Frequency_Test()
 		{
 			//Arrange
-			var address = new Address();
+			var person = new Person();
 
 			//Act
-			var frequencies = address.SortAddresses(addresses);
+			var frequencies = person.SortAddresses(people);
 			var nameAtFirstPosition = frequencies.First().Name;
 			var nameAtLatPosition = frequencies.Last().Name;
 
 			//Assert
-			Assert.AreEqual("Madiba Street", nameAtFirstPosition);
-			Assert.AreEqual("Vermullen Street", nameAtLatPosition);
+			Assert.AreEqual("102 Long Lane", nameAtFirstPosition);
+			Assert.AreEqual("94 Roland St", nameAtLatPosition);
 		}
 
-
 		[TestMethod]
-		public void Write_To_TextFile_Addressses()
+		public void Write_Addressses_To_TextFile_Test()
 		{
 			//Arrange
-			var address = new Address();
+			var person = new Person();
 
 			//Act
-			var frequencies = address.SortAddresses(addresses);
+			var frequencies = person.SortAddresses(people);
+			var success = person.WriteAddressesToTextFile(frequencies);
 
 			//Assert
-			try
-			{
-				address.WriteToTextFile(frequencies);
-				Assert.IsTrue(true);
-			}
-			catch
-			{
-				Assert.IsTrue(false);
-			}
-
+			Assert.IsTrue(success);
 		}
 
 		[TestMethod]
-		public void Write_To_TextFile_Names_And_Surnames()
+		public void Write_Names_To_TextFile_Test()
 		{
 			//Arrange
 			var person = new Person();
 
 			//Act
 			var frequencies = person.SortPeople(people);
+			var success = person.WriteNamesToTextFile(frequencies);
 
 			//Assert
-			try
-			{
-				person.WriteToTextFile(frequencies);
-				Assert.IsTrue(true);
-			}
-			catch
-			{
-				Assert.IsTrue(false);
-			}
+			Assert.IsTrue(success);
 		}
 
 	}

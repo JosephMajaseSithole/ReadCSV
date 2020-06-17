@@ -1,5 +1,8 @@
-3, Acton Rd
-3, Church street
-1, Bosman Rd
-1, Jones Rd
-1, Madiba Street
+1, 102 Long Lane
+1, 12 Howard St
+1, 49 Sutherland St
+1, 65 Ambling Way
+1, 78 Short Lane
+1, 8 Crimson Rd
+1, 82 Stewart St
+1, 94 Roland St
